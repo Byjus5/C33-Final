@@ -84,7 +84,7 @@ function draw() {
 }
 
 
-//creating the cannon ball on key press
+//crear bala de cañón con el presionado de tecla
 function keyPressed() {
   if (keyCode === DOWN_ARROW) {
     var cannonBall = new CannonBall(cannon.x, cannon.y);
@@ -94,7 +94,7 @@ function keyPressed() {
   }
 }
 
-// function to show the ball.
+//función para mostrar la bala
 function showCannonBalls(ball, index) {
   ball.display();
   if (ball.body.position.x >= width || ball.body.position.y >= height - 50) {
@@ -104,7 +104,7 @@ function showCannonBalls(ball, index) {
 }
 
 
-//function to show the boat
+//función para mostrar el barco
 function showBoats() {
   if (boats.length > 0) {
     if (
@@ -147,7 +147,7 @@ function showBoats() {
 }
 
 
-//releasing the cannonball on key release
+//soltar la bala de cañón al soltar el presionado de tecla
 function keyReleased() {
   if (keyCode === DOWN_ARROW) {
     cannonExplosion.play();
@@ -161,8 +161,8 @@ function keyReleased() {
 function gameOver() {
   swal(
     {
-      title: `Game Over!!!`,
-      confirmButtonText: "Play Again"
+      title: `¡Fin del juego!`,
+      confirmButtonText: "Jugar de nuevo"
     },
     function(isConfirm) {
       if (isConfirm) {
